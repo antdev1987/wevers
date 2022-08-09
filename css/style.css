@@ -1,0 +1,42 @@
+/* reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+    background: url(../images/FONDO.png) no-repeat center center / cover;
+}
+/* reset */
+
+/* utilities */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+/* utilities */
+
+/* components */
+
+.fade {
+  margin: 50px;
+  padding: 50px;
+  background-color: lightgreen;
+  opacity: 1;
+}
+
+/* components */
+
+/* menu */
+
+/* menu */
