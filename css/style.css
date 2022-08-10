@@ -1,3 +1,7 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font */
+
 /* reset */
 *,
 *::after,
@@ -9,10 +13,11 @@
 
 html {
   font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background: url(../images/FONDO.png) no-repeat center center / cover;
+  background: url(../images/FONDO.png);
 }
 /* reset */
 
@@ -24,19 +29,199 @@ body {
   padding-right: 2rem;
   padding-left: 2rem;
 }
+
+.container--small {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.d-block {
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+.mT-3 {
+  margin-top: 3rem;
+}
+
+.mT-7 {
+  margin-top: 7rem;
+}
+
+.mT-15 {
+  margin-top: 15rem;
+}
+
+.mL-auto {
+  margin-left: auto;
+}
 /* utilities */
 
 /* components */
 
 .fade {
-  margin: 50px;
-  padding: 50px;
-  background-color: lightgreen;
   opacity: 1;
 }
 
+/* title */
+.title,
+.parrafo {
+  color: white;
+}
+
+.title--sub,
+.parrafo {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.title--main {
+  font-size: 6.2rem;
+  font-weight: 600;
+}
+
+.img-title {
+  height: 12rem;
+}
+
+.img-title--small {
+  height: 7rem;
+}
+/* title */
+
+/* unete */
+.unete {
+  text-align: center;
+}
+
+.unete__title {
+  color: white;
+
+  font-size: 2.4rem;
+}
+
+.unete__container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+
+  margin-top: 2rem;
+
+  list-style: none;
+}
+
+.unete__container .btn,
+.btn--small {
+  height: 5rem;
+}
+/* unete */
+
+/* decorative */
+.decorative {
+  position: relative;
+}
+
+.decorative__w {
+  position: absolute;
+
+  z-index: -1;
+}
+
+.decorative__w--1 {
+  top: 110rem;
+  left: 0;
+  height: 45rem;
+}
+
+.decorative__w--2 {
+  top: 175rem;
+  right: 0;
+  height: 60rem;
+}
+
+.decorative__w--3 {
+  top: 270rem;
+  left: 0;
+  height: 200rem;
+}
+
+.decorative__w--4 {
+  top: 340rem;
+  right: 0;
+  height: 70rem;
+}
+/* decorative */
 /* components */
 
 /* menu */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
 
+  padding: 2rem 0;
+
+  background: transparent;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+}
+
+.nav__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  height: 3rem;
+}
+
+.nav__container {
+  display: flex;
+  gap: 2rem;
+
+  list-style: none;
+}
+
+.nav__links {
+  color: white;
+
+  font-size: 1.7rem;
+
+  text-transform: uppercase;
+  text-decoration: none;
+}
 /* menu */
+
+/* header */
+.header {
+  text-align: center;
+
+  margin-top: 15rem;
+}
+/* header */
+
+/* tribu */
+.tribu--container-small {
+  max-width: 60rem;
+}
+/* tribu */
