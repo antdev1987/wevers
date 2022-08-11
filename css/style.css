@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  background: url(../images/FONDO.png);
+  background: url(../images/FONDO.png) no-repeat top right / cover;
 }
 /* reset */
 
@@ -533,8 +533,6 @@ body {
   background-color: black;
 
   margin-top: -30rem;
-
-  /* background: url(../images/ROAD\ MAP/); */
 }
 
 .weversCentral {
@@ -542,6 +540,15 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+}
+
+.weversCentral .bg2 {
+  position: absolute;
+  width: 100rem;
+  height: 150rem;
+  background: black;
+  top: 30%;
+  z-index: -1;
 }
 
 .weversCentral .unete {
