@@ -11,6 +11,7 @@
     <!-- style -->
 
     <!-- script -->
+    <script src="js/modal.js" defer></script>
     <script src="js/fade.js" defer></script>
     <script src="js/slideText.js" defer></script>
     <!-- script -->
@@ -18,6 +19,54 @@
     <title>Document</title>
   </head>
   <body class="decorative">
+    <!-- menu -->
+    <nav class="nav" id="nav">
+      <div class="nav__content container">
+        <img
+          src="images/MENU/Menu logo wevers.png"
+          alt="logo wevers"
+          loading="lazy"
+          class="nav__logo"
+        />
+
+        <ul class="nav__container">
+          <!-- box -->
+          <li class="nav__links-box">
+            <a href="#" class="nav__links"> nosotros </a>
+          </li>
+          <!-- box -->
+
+          <!-- box -->
+          <li class="nav__links-box">
+            <a href="#" class="nav__links"> road map </a>
+          </li>
+          <!-- box -->
+
+          <!-- box -->
+          <li class="nav__links-box">
+            <a href="#partners" class="nav__links"> partners </a>
+          </li>
+          <!-- box -->
+
+          <!-- box -->
+          <li class="nav__links-box">
+            <button class="nav__links openModal">contactanos</button>
+          </li>
+          <!-- box -->
+        </ul>
+
+        <div class="hamburguer">
+          <a href="#nav" class="hamburguer__open">
+            <img src="images/menu.svg" alt="" />
+          </a>
+          <a href="#des" class="hamburguer__close">
+            <img src="images/close.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- menu -->
+
     <!-- decorative -->
     <img
       src="images/TRIBE HUB/tribe hub w1.png"
@@ -48,44 +97,193 @@
     />
     <!-- decorative -->
 
-    <!-- menu -->
-    <nav class="nav">
-      <div class="nav__content container">
-        <img
-          src="images/MENU/Menu logo wevers.png"
-          alt="logo wevers"
-          loading="lazy"
-          class="nav__logo"
-        />
+    <!-- modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
 
-        <ul class="nav__container">
-          <!-- box -->
-          <li class="nav__links-box">
-            <a href="#" class="nav__links"> nosotros </a>
-          </li>
-          <!-- box -->
+        <div class="modal__option" id="modalescoger">
+          <div class="modal__escoger">
+            <button class="option" id="empresa">Empresa</button>
+            <button class="option" id="persona">Persona</button>
+          </div>
+        </div>
 
-          <!-- box -->
-          <li class="nav__links-box">
-            <a href="#" class="nav__links"> road map </a>
-          </li>
-          <!-- box -->
+        <div class="modal__option" id="modalempresa">
+          <div class="text-center">
+            <img
+              src="images/WEVERS CENTRAL/wevers central logo.png"
+              alt=""
+              class="nav__logo"
+            />
+          </div>
 
-          <!-- box -->
-          <li class="nav__links-box">
-            <a href="#" class="nav__links"> partners </a>
-          </li>
-          <!-- box -->
+          <form>
+            <div class="modal__flex">
+              <div class="modal__box">
+                <div>
+                  <label for="#">Nombre y apellido</label>
+                  <input type="text" placeholder="Escribe tu nombre" />
+                </div>
 
-          <!-- box -->
-          <li class="nav__links-box">
-            <a href="#" class="nav__links"> contactanos </a>
-          </li>
-          <!-- box -->
-        </ul>
+                <div class="mT-3">
+                  <label for="#">Tipo de comunidad</label>
+                  <input type="text" placeholder="Selecciona" />
+                </div>
+
+                <div class="mT-3">
+                  <label for="#">Compañía</label>
+                  <input placeholder="Escribe tu compañía" list="trabajos" />
+
+                  <datalist id="trabajos">
+                    <option value="red">red</option>
+                    <option value="white">white</option>
+                    <option value="yellow">yellow</option>
+                  </datalist>
+                </div>
+
+                <div class="mT-3">
+                  <label for="#">No. Personas de su empresa</label>
+                  <input type="text" placeholder="1,2,3..." />
+                </div>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="modal__box">
+                <div>
+                  <label for="#">¿Cómo conociste wevers?</label>
+                  <input type="text" placeholder="Escribe tu respuesta" />
+                </div>
+
+                <div class="mT-3">
+                  <label for="#">¿Pórque deseas pertenecer a wevers?</label>
+                  <textarea></textarea>
+                </div>
+
+                <div class="two-columns mT-3">
+                  <div>
+                    <label for="#">WebSite</label>
+                    <input type="" placeholder="www..." />
+                  </div>
+                  <div>
+                    <label for="#">Celular +</label>
+                    <input type="text" placeholder="123..." />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mT-3">
+              <button class="submit" type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal__option" id="modalpersona">
+          <div class="text-center">
+            <img
+              src="images/WEVERS CENTRAL/wevers central logo.png"
+              alt=""
+              class="nav__logo"
+            />
+          </div>
+
+          <form>
+            <div class="modal__flex">
+              <div class="modal__box">
+                <div>
+                  <label for="#">Nombre y apellido</label>
+                  <input type="text" placeholder="Escribe tu nombre" />
+                </div>
+
+                <div class="mT-3">
+                  <label for="#">¿Cómo conociste wevers?</label>
+                  <input type="text" placeholder="Escribe tu respuesta" />
+                </div>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="modal__box">
+                <div>
+                  <label for="#">¿Pórque deseas pertenecer a wevers?</label>
+                  <input type="text" placeholder="Escribe tu respuesta" />
+                </div>
+
+                <div class="two-columns mT-3">
+                  <div>
+                    <label for="#">Celular +</label>
+                    <input type="text" placeholder="123..." />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mT-3">
+              <button class="submit" type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal__option" id="modaltrabajando">
+          <div class="text-center">
+            <img
+              src="images/WEVERS CENTRAL/wevers central logo.png"
+              alt=""
+              class="nav__logo"
+            />
+          </div>
+
+          <form>
+            <div class="modal__flex">
+              <div class="modal__box">
+                <div>
+                  <label for="#">Nombre y apellido</label>
+                  <input type="text" placeholder="Escribe tu nombre" />
+                </div>
+
+                <div class="mT-3">
+                  <label for="#">Profeción</label>
+                  <input type="text" placeholder="Escribe tu respuesta" />
+                </div>
+
+                <div class="mT-3">
+                  <label for="#">¿Cómo conociste wevers?</label>
+                  <input type="text" placeholder="Escribe tu respuesta" />
+                </div>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="modal__box">
+                <div>
+                  <label for="#">¿Pórque deseas pertenecer a wevers?</label>
+                  <textarea></textarea>
+                </div>
+
+                <div class="two-columns mT-3">
+                  <div>
+                    <label for="#">WebSite</label>
+                    <input type="" placeholder="www..." />
+                  </div>
+                  <div>
+                    <label for="#">Celular +</label>
+                    <input type="text" placeholder="123..." />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mT-3">
+              <button class="submit" type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
       </div>
-    </nav>
-    <!-- menu -->
+    </div>
+    <!-- modal -->
 
     <!-- header -->
     <header class="header container">
@@ -215,7 +413,7 @@
           <h2 class="title title--main">Educación:</h2>
 
           <div class="parrafo">
-            <p class="fw-500">
+            <p>
               Lleva la experiencia de educación para tus estudiantes al
               siguiente nivel.
             </p>
@@ -240,7 +438,7 @@
           <h2 class="title title--main">Innovación Social:</h2>
 
           <div class="parrafo">
-            <p class="fw-500">
+            <p>
               Nuestro objetivo es impactar y colaborar con organizaciones
               sociales en su misión.
             </p>
@@ -356,14 +554,17 @@
         <h2 class="unete__title">¿TIENES UNA COMUNIDAD?</h2>
 
         <div class="mT-3">
-          <a href="#">
+          <button
+            style="background: none; border: none; cursor: pointer"
+            class="openModal"
+          >
             <img
               src="images/TIENES UNA COMUNIDAD/¿Tienes una comunidad_ unete a la tribu.png"
               alt="unete a la tribu"
               loading="lazy"
               class="btn--small"
             />
-          </a>
+          </button>
         </div>
 
         <div class="fade text-center mT-7">
@@ -432,7 +633,7 @@
 
     <!-- section -->
     <section class="ecosistema container text-center">
-      <video autoplay loop muted style="max-height: 150rem">
+      <video autoplay loop muted>
         <source src="ecosistema-transparente_ZV1u7IPW.mp4" />
       </video>
     </section>
@@ -541,12 +742,12 @@
     <!-- section -->
 
     <!-- section -->
-    <section class="partners container mT-15">
+    <section class="partners container mT-15" id="partners">
       <div class="text-center">
         <img
           src="images/NUESTROS PARTNERS/nestros partners titulo.png"
           alt=""
-          class="equipo__logo"
+          class="equipo__logo equipo__logo--small"
         />
       </div>
 
@@ -566,14 +767,17 @@
         <h2 class="unete__title">¿TIENES UNA COMUNIDAD?</h2>
 
         <div class="mT-3">
-          <a href="#">
+          <button
+            style="background: none; border: none; cursor: pointer"
+            class="openModal"
+          >
             <img
               src="images/TIENES UNA COMUNIDAD/¿Tienes una comunidad_ unete a la tribu.png"
               alt="unete a la tribu"
               loading="lazy"
               class="btn--small"
             />
-          </a>
+          </button>
         </div>
       </div>
     </section>
@@ -607,12 +811,12 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.instagram.com/weversoficial/" target="_blank">
                 <img src="images/FOOTER/footer instagram.png" alt="" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.facebook.com/wevers.club/" target="_blank">
                 <img src="images/FOOTER/footer facebook.png" alt="" />
               </a>
             </li>
@@ -627,12 +831,12 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://twitter.com/Weversoficial" target="_blank">
                 <img src="images/FOOTER/footer twitter.png" alt="" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.tiktok.com/@wevers.club" target="_blank">
                 <img src="images/FOOTER/footer tik tok.png" alt="" />
               </a>
             </li>
@@ -681,13 +885,16 @@
         </div>
 
         <div>
-          <a href="#">
+          <button
+            style="background: none; border: none; cursor: pointer"
+            id="trabaja"
+          >
             <img
               src="images/FOOTER/footer trabaja con nosotros.png"
               alt=""
               class="btn--small"
             />
-          </a>
+          </button>
         </div>
       </div>
     </footer>

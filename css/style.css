@@ -11,9 +11,25 @@
   box-sizing: border-box;
 }
 
+:root {
+  scroll-padding-top: 10rem;
+}
+
 html {
   font-size: 62.5%;
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -99,12 +115,38 @@ body {
   font-weight: 600;
 }
 
+@media (max-width: 500px) {
+  .title--main {
+    font-size: 4.2rem;
+  }
+}
+
 .img-title {
   height: 12rem;
 }
 
 .img-title--small {
   height: 7rem;
+}
+
+@media (max-width: 500px) {
+  .img-title {
+    height: 7rem;
+  }
+
+  .img-title--small {
+    height: 4rem;
+  }
+
+  .equipo__logo--small {
+    height: 3rem !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .equipo__logo {
+    width: 100%;
+  }
 }
 /* title */
 
@@ -170,20 +212,193 @@ body {
   height: 70rem;
 }
 /* decorative */
+
+/* pop up */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100001; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  backdrop-filter: blur(0.9rem);
+  -webkit-backdrop-filter: blur(0.9rem);
+  align-items: center;
+}
+
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background: linear-gradient(to right, #5d096f, black, #22051c);
+  margin: auto;
+  padding: 5rem 2rem;
+  width: 70%;
+  border-radius: 2rem;
+
+}
+
+.modal__escoger {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0.5rem 5rem;
+}
+
+#modalempresa {
+  display: none;
+}
+
+#modalpersona {
+  display: none;
+}
+
+.modal__flex {
+  display: flex;
+  gap: 3rem;
+
+  margin-top: 3rem;
+  padding: 0 3rem;
+}
+
+@media (max-width: 500px) {
+  .modal-content {
+    width: 90%;
+  }
+  .modal__flex {
+    flex-direction: column;
+  }
+}
+
+.modal__flex .line {
+  background: white;
+  width: 0.1rem;
+  align-self: stretch;
+}
+
+.modal__escoger button {
+  color: white;
+  font-size: 2rem;
+
+  cursor: pointer;
+
+  background: none;
+  border: none;
+}
+
+.modal__box {
+  flex: 1;
+}
+
+.modal__box .two-columns {
+  display: flex;
+  gap: 3rem;
+}
+
+.modal__box label {
+  font-size: 1.7rem;
+  font-weight: 500;
+
+  color: white;
+}
+
+.modal__box input,
+.modal__box textarea {
+  display: block;
+
+  width: 100%;
+
+  font-size: 1.5rem;
+
+  color: white;
+
+  padding: 0.5rem 1rem 0.5rem 0;
+  background: none;
+
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.modal__box textarea {
+  resize: none;
+  width: 100%;
+  height: 11rem;
+}
+
+.modal__box input::placeholder {
+  color: rgb(206, 197, 197);
+}
+
+.modal__box input:focus,
+.modal__box textarea:focus {
+  outline: none;
+}
+
+.submit {
+  padding: 1rem 3rem;
+  background: none;
+
+  border: 1px solid white;
+  color: white;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 0.2rem;
+  right: 2rem;
+
+  color: white;
+  font-size: 4rem;
+
+  font-weight: 500;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+/* pop up */
+
 /* components */
 
 /* menu */
 .nav {
   position: fixed;
-  top: 0;
-  z-index: 10000;
+  /* top: 0; */
   width: 100%;
+
+  z-index: 10000;
 
   padding: 2rem 0;
 
   background: transparent;
   backdrop-filter: blur(1rem);
   -webkit-backdrop-filter: blur(1rem);
+
+  --state-open: scale(1);
+  --state-close: scale(0);
+  --active: translate(100%);
+  --nav: unset;
+  --opacity: 0;
+}
+
+.nav:target {
+  --state-open: scale(0);
+  --state-close: scale(1);
+  --active: translate(0);
+  --nav: 100vh;
+  --opacity: 1;
 }
 
 .nav__content {
@@ -203,10 +418,63 @@ body {
   list-style: none;
 }
 
+.hamburguer {
+  position: relative;
+  height: 4rem;
+  width: 3rem;
+  display: none;
+}
+
+.hamburguer a {
+  position: absolute;
+  transition: transform 1s;
+}
+
+.hamburguer__open {
+  transform: var(--state-open);
+}
+
+.hamburguer__close {
+  transform: var(--state-close);
+}
+
+@media (max-width: 500px) {
+  .hamburguer {
+    display: block;
+  }
+  
+  .nav {
+    height: var(--nav);
+  }
+
+  .nav__container {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+
+    padding: 0 2rem;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: var(--active);
+    opacity: var(--opacity);
+    transition: opacity 2s;
+  }
+}
+
 .nav__links {
   color: white;
+  border: none;
+  background: none;
 
   font-size: 1.7rem;
+
+  cursor: pointer;
 
   text-transform: uppercase;
   text-decoration: none;
@@ -241,8 +509,24 @@ body {
   z-index: -1;
 }
 
+@media (max-width: 600px) {
+  .ecosistema {
+    margin-top: 15rem;
+    min-height: 87rem;
+  }
+}
+
 .ecosistema video {
   z-index: -1;
+
+  max-height: 150rem;
+}
+
+@media (max-width: 800px) {
+  .ecosistema video {
+    max-height: unset;
+    width: 100%;
+  }
 }
 
 .roadMap {
@@ -334,14 +618,34 @@ body {
   justify-content: center;
 }
 
+@media (max-width: 1000px) {
+  .equipo__container {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
 .equipo__container > div {
   width: 50%;
 
   text-align: center;
 }
 
+@media (max-width: 600px) {
+  .equipo__container > div {
+    width: 100%;
+  }
+}
+
 .equipo__container img {
   height: 19rem;
+}
+
+@media (max-width: 600px) {
+  .equipo__container img {
+    height: unset;
+    width: 100%;
+  }
 }
 
 .footer {
@@ -354,6 +658,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 960px) {
+  .footer__container {
+    row-gap: 3rem;
+  }
+  .footer__container > div {
+    width: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer__container {
+    flex-direction: column;
+  }
+  .footer__container > div {
+    width: unset;
+  }
 }
 
 .footer__w {
@@ -380,11 +703,11 @@ body {
   color: white;
 }
 
-.footer__box a{
+.footer__box a {
   display: inline-block;
-  
+
   margin-top: 1.5rem;
-  
+
   color: white;
   font-size: 1.7rem;
   font-weight: 300;
