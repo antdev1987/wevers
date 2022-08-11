@@ -33,8 +33,7 @@ html {
 }
 
 body {
-  /* background: black; */
-  background-image: url(../images/FONDO.png) no-repeat center center / cover;
+  background: url(../images/FONDO.png) no-repeat top center / cover;
 }
 /* reset */
 
