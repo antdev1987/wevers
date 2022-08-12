@@ -99,7 +99,7 @@ body {
   content: '';
   background: url(../images/FONDO-2.png) no-repeat center center / cover;
   position: absolute;
-  top: 30%;
+  top:0%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 1000px;
@@ -531,9 +531,9 @@ body {
 .nuestro {
   position: relative;
   z-index: 1000;
-  background: black;
+  /* background: black; */
   width: 100%;
-  margin-top: 19rem;
+  margin-top: 23rem;
 }
 
 .nuestro > * {
@@ -572,24 +572,14 @@ body {
   }
 }
 
-@media (max-width: 760px) {
-  .ecosistema video {
-    height: 130rem;
-  }
-}
-
-@media (max-width: 740px) {
-  .ecosistema {
-    margin-top: -10rem;
-  }
-
-  .ecosistema video {
-    height: unset;
-    width: 100%;
-  }
-}
-
 @media (max-width: 500px) {
+  .ecosistema video {
+    height: 120rem;
+  }
+}
+
+
+/* @media (max-width: 500px) {
   .ecosistema::after {
     content: '';
     position: absolute;
@@ -598,7 +588,7 @@ body {
     background: rgb(0, 0, 0);
     bottom: 0;
   }
-}
+} */
 
 .roadMap {
   position: relative;
