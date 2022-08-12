@@ -848,6 +848,9 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 90rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .equipo__nombre {
@@ -855,13 +858,13 @@ html {
 }
 
 .equipo__nombre--david {
-  max-width: 30rem;
-  margin-left: 9rem;
+  width: 30rem;
+  margin-left: 2.3rem;
 }
 
-@media (max-width: 1100px){
-  .equipo__nombre--david {
-    margin-left: 4rem;
+@media (min-width: 1001px) {
+  .equipo__nombre {
+    max-width: 40rem;
   }
 }
 
@@ -871,18 +874,34 @@ html {
     flex-direction: column;
   }
 
-  .equipo__nombre--rodolfo {
+  .nelson img {
+    width: 30rem;
+  }
+
+  .esteban img {
+    width: 33rem;
+  }
+
+  .rodolfo img {
+    width: 32rem;
+  }
+
+  .david img {
+    width: 25rem;
     margin: 0;
   }
 
-  .equipo__nombre--david {
-    min-width: 32rem;
+  .hamza img {
+    width: 30rem;
+  }
+
+  .equipo__nombre--rodolfo {
     margin: 0;
   }
 
   .equipo__container > div {
     width: 50%;
-  
+
     text-align: unset;
   }
 }
@@ -894,23 +913,13 @@ html {
 }
 
 @media (max-width: 600px) {
+  .equipo__container {
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+  }
   .equipo__container > div {
     width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .equipo__container > div {
-    text-align: center;
-  }
-
-  .equipo__container img {
-    height: unset;
-    /* width: 100%; */
-  }
-
-  .equipo__nombre--david {
-    margin-left: -10rem;
   }
 }
 
