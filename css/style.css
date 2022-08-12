@@ -298,7 +298,7 @@ body {
   padding: 0 3rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .modal-content {
     width: 90%;
   }
