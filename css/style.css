@@ -658,6 +658,8 @@ body {
 
   margin-left: auto;
   padding-left: 5rem;
+
+  min-height: 670px;
 }
 
 .roadMap__ul--2::after {
@@ -735,6 +737,10 @@ body {
 @media (max-width: 1010px) {
   .roadMap {
     height: unset;
+  }
+
+  .roadMap__ul--2 {
+    min-height: unset;
   }
 
   .roadMap .bg3 {
@@ -860,7 +866,6 @@ body {
 .equipo__content {
   display: flex;
   align-items: center;
-  /* gap: 2rem; */
 
   font-size: 2rem;
 
