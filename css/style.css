@@ -150,6 +150,10 @@ html {
   height: 7rem;
 }
 
+.equipo__logo {
+  height: 4rem;
+}
+
 @media (max-width: 500px) {
   .img-title {
     height: 7rem;
@@ -838,10 +842,6 @@ html {
   .equipo {
     margin-top: 40rem;
   }
-}
-
-.equipo__logo {
-  height: 4rem;
 }
 
 .equipo__container {
