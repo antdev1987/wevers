@@ -227,6 +227,7 @@ body {
   top: 110rem;
   left: 0;
   height: 45rem;
+  z-index: 1;
 }
 
 .decorative__w--2 {
@@ -236,13 +237,13 @@ body {
 }
 
 .decorative__w--3 {
-  top: 270rem;
+  top: 320rem;
   left: 0;
-  height: 200rem;
+  height: 60rem;
 }
 
 .decorative__w--4 {
-  top: 340rem;
+  top: 400rem;
   right: 0;
   height: 70rem;
 }
@@ -550,14 +551,6 @@ body {
   width: 100%;
 }
 
-.ecosistema::after {
-  content: '';
-  position: absolute;
-  height: 240px;
-  width: 100%;
-  background: rgb(0, 0, 0);
-  bottom: 0;
-}
 
 @media (max-width: 800px) {
   .ecosistema {
@@ -596,6 +589,16 @@ body {
     height: unset;
     width: 100%;
   }
+
+  .ecosistema::after {
+    content: '';
+    position: absolute;
+    height: 240px;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    bottom: 0;
+  }
+  
 }
 
 .roadMap {
