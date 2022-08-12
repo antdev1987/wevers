@@ -581,14 +581,16 @@ body {
 
 @media (max-width: 740px) {
   .ecosistema {
-    margin-top: -15rem;
+    margin-top: -10rem;
   }
 
   .ecosistema video {
     height: unset;
     width: 100%;
   }
+}
 
+@media (max-width: 500px) {
   .ecosistema::after {
     content: '';
     position: absolute;
@@ -742,7 +744,7 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .roadMap {
     height: unset;
   }
