@@ -551,7 +551,6 @@ body {
   width: 100%;
 }
 
-
 @media (max-width: 800px) {
   .ecosistema {
     height: 100rem;
@@ -584,7 +583,7 @@ body {
   .ecosistema {
     margin-top: -15rem;
   }
-  
+
   .ecosistema video {
     height: unset;
     width: 100%;
@@ -598,7 +597,6 @@ body {
     background: rgb(0, 0, 0);
     bottom: 0;
   }
-  
 }
 
 .roadMap {
@@ -608,7 +606,7 @@ body {
   background: black;
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
   .roadMap {
     margin-top: -20rem;
   }
@@ -656,12 +654,15 @@ body {
   padding-top: 12rem;
 
   max-width: 90rem;
+
   margin-left: auto;
+  padding-left: 5rem;
 }
 
 .roadMap__ul--2::after {
   top: 50%;
   left: 0;
+
   background: url(../images/ROADMAP/QUARTER\ 2\ \ 2022.png) no-repeat;
   transform: translate(-50%, -50%);
 }
@@ -741,7 +742,7 @@ body {
   }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 900px) {
   .roadMap {
     height: unset;
   }
