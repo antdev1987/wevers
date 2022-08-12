@@ -227,7 +227,6 @@ body {
   top: 110rem;
   left: 0;
   height: 45rem;
-  z-index: 1;
 }
 
 .decorative__w--2 {
@@ -851,7 +850,6 @@ body {
 .equipo__box {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 5rem;
   justify-content: center;
 
   max-width: 90rem;
@@ -862,14 +860,20 @@ body {
 .equipo__content {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  /* gap: 2rem; */
 
   font-size: 2rem;
 
   width: 50%;
+
+  margin-top: 5rem;
   padding-right: 1rem;
 
   color: white;
+}
+
+.equipo__content div:last-child {
+  margin-left: 2rem;
 }
 
 @media (max-width: 600px) {
