@@ -854,7 +854,7 @@ html {
 }
 
 .equipo__nombre {
-  max-width:40rem;
+  max-width: 40rem;
 }
 
 .equipo__nombre--david {
@@ -921,6 +921,12 @@ html {
   .equipo__container > div {
     width: 100%;
   }
+
+ 
+}
+
+.equipo__container > div:not(:first-child) {
+  margin-top: -3.5rem;
 }
 
 .partners {
