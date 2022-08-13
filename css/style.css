@@ -384,6 +384,11 @@ body {
   cursor: pointer;
 }
 
+#trabaja {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 /* The Close Button */
 .close {
   position: absolute;
