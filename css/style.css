@@ -542,42 +542,24 @@ body {
 
 .ecosistema {
   position: relative;
-  /* margin-top: -5rem; */
   z-index: -1;
-  height: 100rem;
-  overflow: hidden;
+  max-width: 900px;
+
+  margin-top: -15rem;
+  
   background: black;
-  width: 100%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 550px){
   .ecosistema {
-    height: 100rem;
+    margin-top: -5rem;
   }
 }
 
 .ecosistema video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
   z-index: -1;
-  height: 190rem;
+  width: 100%;
 }
-
-@media (max-width: 900px) {
-  .ecosistema video {
-    height: 160rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .ecosistema video {
-    height: 120rem;
-  }
-}
-
 
 /* @media (max-width: 500px) {
   .ecosistema::after {
@@ -595,12 +577,6 @@ body {
   height: 170rem;
   z-index: 101;
   background: black;
-}
-
-@media (max-width: 400px) {
-  .roadMap {
-    margin-top: -20rem;
-  }
 }
 
 .roadMap .title {
