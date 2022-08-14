@@ -386,7 +386,7 @@ body {
   font-weight: 700;
 
   text-decoration: none;
-  
+
   cursor: pointer;
 }
 
@@ -831,9 +831,15 @@ body {
   margin: 3rem 0;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .queHacemos iframe {
-    margin: 0;
+    max-height: 30rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .queHacemos iframe {
+    max-height: 20rem;
   }
 }
 
