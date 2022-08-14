@@ -79,6 +79,10 @@ body {
   margin-top: 3rem;
 }
 
+.mT-5 {
+  margin-top: 5rem;
+}
+
 .mT-7 {
   margin-top: 7rem;
 }
@@ -99,7 +103,7 @@ body {
   content: '';
   background: url(../images/FONDO-2.png) no-repeat center center / cover;
   position: absolute;
-  top:0%;
+  top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 1000px;
@@ -381,6 +385,8 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
 
+  text-decoration: none;
+  
   cursor: pointer;
 }
 
@@ -551,11 +557,11 @@ body {
   max-width: 900px;
 
   margin-top: -15rem;
-  
+
   background: black;
 }
 
-@media (max-width: 550px){
+@media (max-width: 550px) {
   .ecosistema {
     margin-top: -5rem;
   }
@@ -816,6 +822,19 @@ body {
   -o-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
   transform: translate3d(0, 0px, 0px);
+}
+
+.queHacemos iframe {
+  display: inline-block;
+  width: 100%;
+
+  margin: 3rem 0;
+}
+
+@media (max-width: 500px) {
+  .queHacemos iframe {
+    margin: 0;
+  }
 }
 
 .equipo {
