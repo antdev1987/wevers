@@ -824,7 +824,7 @@ body {
   transform: translate3d(0, 0px, 0px);
 }
 
-.queHacemos iframe {
+.header iframe {
   display: inline-block;
   width: 100%;
 
@@ -832,13 +832,13 @@ body {
 }
 
 @media (max-width: 600px) {
-  .queHacemos iframe {
+  .header iframe {
     max-height: 30rem;
   }
 }
 
 @media (max-width: 400px) {
-  .queHacemos iframe {
+  .header iframe {
     max-height: 20rem;
   }
 }
